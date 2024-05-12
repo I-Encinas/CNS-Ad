@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <style>
-        .btn.btn-primary.d-none.d-sm-inline-block {
-            background-color: rgb(24, 90, 53);
-        }
-    </style>
+    
     {{-- Custom Meta Tags --}}
     @yield('meta_tags')
     {{-- Title --}}

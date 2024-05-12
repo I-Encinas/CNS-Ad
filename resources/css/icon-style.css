@@ -1,4 +1,28 @@
 /*Increase the default Icon size*/
 i.ti {
     font-size: 20px;
+    color: rgb(5, 85, 30);
+}
+.container-fluid{
+    background-color: rgb(145, 184, 153);
+
+}
+.btn.btn-primary.d-none.d-sm-inline-block,
+.btn.btn-primary.ms-auto.ajax-submit {
+        background-color: rgb(24, 90, 53);
+}
+.container-fluid{
+    background-color: rgb(130, 145, 133);
+
+}
+navbar-brand navbar-brand-autodark{
+    width: 60%;
+
+}
+.navbar-brand-image{
+    width: 100%;
+    height: auto;
+}
+.nav-link-title{
+    font-weight: bold;
 }

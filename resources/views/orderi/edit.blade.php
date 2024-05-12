@@ -1,6 +1,6 @@
 @extends('tablar::page')
 
-@section('title', 'Editar Usuario')
+@section('title', 'Editar Pedido')
 
 @section('content')
     <!-- Page header -->
@@ -13,13 +13,13 @@
                         Editar
                     </div>
                     <h2 class="page-title">
-                        {{ __('Usuario ') }}
+                        {{ __('Order ') }}
                     </h2>
                 </div>
                 <!-- Page title actions -->
                 <div class="col-12 col-md-auto ms-auto d-print-none">
                     <div class="btn-list">
-                        <a href="{{ route('users.index') }}" class="btn btn-primary d-none d-sm-inline-block">
+                        <a href="{{ route('orderis.index') }}" class="btn btn-primary d-none d-sm-inline-block">
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
                                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -45,15 +45,15 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">User Details</h3>
+                            <h3 class="card-title">Detalles</h3>
                         </div>
                         <div class="card-body">
                             <form method="POST"
-                                  action="{{ route('users.update', $user->id) }}" id="ajaxForm" role="form"
+                                  action="{{ route('orderis.update', $order->id) }}" id="ajaxForm" role="form"
                                   enctype="multipart/form-data">
                                 {{ method_field('PATCH') }}
                                 @csrf
-                                @include('user.form')
+                                @include('orderi.form')
                             </form>
                         </div>
                     </div>

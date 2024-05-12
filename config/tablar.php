@@ -145,15 +145,15 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'text' => 'Home',
+            'text' => 'General',
             'icon' => 'ti ti-home',
-            'url' => 'home'
+            'url' => '/home'
         ],
 
         [
             'text' => 'Personal',
             'url' => '#',
-            'icon' => 'ti ti-help',
+            'icon' => 'ti ti-users',
             'active' => ['personal'],
             'submenu' => [
                 [
@@ -164,29 +164,39 @@ return [
                 [
                     'text' => 'Empleados',
                     'url' => '/employees',
-                    'icon' => 'ti ti-id-badge',
+                    'icon' => 'ti ti-id',
                 ],
                 [
                     'text' => 'Servicios',
                     'url' => '/services',
-                    'icon' => 'ti ti-view-list-alt',
+                    'icon' => 'ti ti-files',
                 ]
             ],
         ],
 
-        // [
-        //     'text' => 'Support 2',
-        //     'url' => '#',
-        //     'icon' => 'ti ti-help',
-        //     'active' => ['support2'],
-        //     'submenu' => [
-        //         [
-        //             'text' => 'Ticket',
-        //             'url' => 'support2',
-        //             'icon' => 'ti ti-article',
-        //         ]
-        //     ],
-        // ],
+        [
+            'text' => 'Pedidos',
+            'url' => '#',
+            'icon' => 'ti ti-shopping-cart',
+            'active' => ['pedidos'],
+            'submenu' => [
+                [
+                    'text' => 'Pedidos Internos',
+                    'url' => '/orderis',
+                    'icon' => 'ti ti-pin',
+                ],
+                [
+                    'text' => 'Pedidos Especiales',
+                    'url' => '/orders',
+                    'icon' => 'ti ti-clock',
+                ],
+                [
+                    'text' => 'Pedidos Externos',
+                    'url' => '/orders',
+                    'icon' => 'ti ti-truck',
+                ]
+            ],
+        ],
 
         // [
         //     'text' => 'Support 3',

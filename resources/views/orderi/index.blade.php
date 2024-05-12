@@ -1,7 +1,7 @@
 @extends('tablar::page')
 
 @section('title')
-    Usuario
+    Orderis
 @endsection
 
 @section('content')
@@ -12,16 +12,16 @@
                 <div class="col">
                     <!-- Page pre-title -->
                     <div class="page-pretitle">
-                        Lista
+                        Listo
                     </div>
                     <h2 class="page-title">
-                        {{ __('Usuario ') }}
+                        {{ __('Orders ') }}
                     </h2>
                 </div>
                 <!-- Page title actions -->
                 <div class="col-12 col-md-auto ms-auto d-print-none">
                     <div class="btn-list">
-                        <a href="{{ route('users.create') }}" class="btn btn-primary d-none d-sm-inline-block">
+                        <a href="{{ route('orderis.create') }}" class="btn btn-primary d-none d-sm-inline-block">
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
                                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -30,7 +30,7 @@
                                 <line x1="12" y1="5" x2="12" y2="19"/>
                                 <line x1="5" y1="12" x2="19" y2="12"/>
                             </svg>
-                            Crear Usuario
+                            Create Order
                         </a>
                     </div>
                 </div>
@@ -47,20 +47,20 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Usuario</h3>
+                            <h3 class="card-title">Order</h3>
                         </div>
                         <div class="card-body border-bottom py-3">
                             <div class="d-flex">
                                 <div class="text-muted">
-                                    Mostrar
+                                    Show
                                     <div class="mx-2 d-inline-block">
                                         <input type="text" class="form-control form-control-sm" value="10" size="3"
                                                aria-label="Invoices count">
                                     </div>
-                                    entradas
+                                    entries
                                 </div>
                                 <div class="ms-auto text-muted">
-                                    Buscar:
+                                    Search:
                                     <div class="ms-2 d-inline-block">
                                         <input type="text" class="form-control form-control-sm"
                                                aria-label="Search invoice">
@@ -85,49 +85,51 @@
                                         </svg>
                                     </th>
                                     
-										<th>Nombre</th>
-										<th>Correo Electronico</th>
+										<th>Order Type Id</th>
+										<th>Status</th>
+										<th>Date O</th>
 
                                     <th class="w-1"></th>
                                 </tr>
                                 </thead>
 
                                 <tbody>
-                                @forelse ($users as $user)
+                                @forelse ($orders as $order)
                                     <tr>
                                         <td><input class="form-check-input m-0 align-middle" type="checkbox"
-                                                   aria-label="Select user"></td>
+                                                   aria-label="Select order"></td>
                                         <td>{{ ++$i }}</td>
                                         
-											<td>{{ $user->name }}</td>
-											<td>{{ $user->email }}</td>
+											<td>{{ $order->order_type_id }}</td>
+											<td>{{ $order->status }}</td>
+											<td>{{ $order->date_o }}</td>
 
                                         <td>
                                             <div class="btn-list flex-nowrap">
                                                 <div class="dropdown">
                                                     <button class="btn dropdown-toggle align-text-top"
                                                             data-bs-toggle="dropdown">
-                                                        Acciones
+                                                        Actions
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-end">
                                                         <a class="dropdown-item"
-                                                           href="{{ route('users.show',$user->id) }}">
-                                                            Ver
+                                                           href="{{ route('orders.show',$order->id) }}">
+                                                            View
                                                         </a>
                                                         <a class="dropdown-item"
-                                                           href="{{ route('users.edit',$user->id) }}">
-                                                            Editar
+                                                           href="{{ route('orders.edit',$order->id) }}">
+                                                            Edit
                                                         </a>
                                                         <form
-                                                            action="{{ route('users.destroy',$user->id) }}"
+                                                            action="{{ route('orders.destroy',$order->id) }}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit"
-                                                                    onclick="if(!confirm('Esta accion no se puede revertir')){return false;}"
+                                                                    onclick="if(!confirm('Do you Want to Proceed?')){return false;}"
                                                                     class="dropdown-item text-red"><i
                                                                     class="fa fa-fw fa-trash"></i>
-                                                                Eliminar
+                                                                Delete
                                                             </button>
                                                         </form>
                                                     </div>
@@ -136,14 +138,14 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <td>No hay datos</td>
+                                    <td>No Data Found</td>
                                 @endforelse
                                 </tbody>
 
                             </table>
                         </div>
                        <div class="card-footer d-flex align-items-center">
-                            {!! $users->links('tablar::pagination') !!}
+                            {!! $orders->links('tablar::pagination') !!}
                         </div>
                     </div>
                 </div>

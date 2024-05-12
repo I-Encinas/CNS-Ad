@@ -22,6 +22,8 @@ class User extends Authenticatable
 		'email' => 'required',
 		// 'password' => 'required',
     ];
+    protected $perPage = 20;
+
     protected $fillable = [
         'name',
         'email',
