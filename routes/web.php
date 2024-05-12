@@ -21,63 +21,56 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+ Route::resource('/employees', App\Http\Controllers\EmployeeController::class);
+    Route::get('/',[\App\Http\Controllers\EmployeeController::class, 'index'])->name('index');
+    Route::get('/create',[\App\Http\Controllers\EmployeeController::class, 'create'])->name('create');
+    Route::post('/',[\App\Http\Controllers\EmployeeController::class, 'store'])->name('store');
+    Route::get('/{employee}/edit',[\App\Http\Controllers\EmployeeController::class, 'edit'])->name('edit');
+    Route::post('/bulk-destroy',[\App\Http\Controllers\EmployeeController::class, 'Destroy'])->name('bulk-destroy');
+    Route::post('/{employee}',[\App\Http\Controllers\EmployeeController::class, 'update'])->name('update');
+    Route::delete('/{employee}',[\App\Http\Controllers\EmployeeController::class, 'destroy'])->name('destroy');
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/services', App\Http\Controllers\ServiceController::class);
+    Route::get('/',[\App\Http\Controllers\ServiceController::class, 'index'])->name('index');
+    Route::get('/create',[\App\Http\Controllers\ServiceController::class, 'create'])->name('create');
+    Route::post('/',[\App\Http\Controllers\ServiceController::class, 'store'])->name('store');
+    Route::get('/{service}/edit',[\App\Http\Controllers\ServiceController::class, 'edit'])->name('edit');
+    Route::post('/bulk-destroy',[\App\Http\Controllers\ServiceController::class, 'Destroy'])->name('bulk-destroy');
+    Route::post('/{service}',[\App\Http\Controllers\ServiceController::class, 'update'])->name('update');
+    Route::delete('/{service}',[\App\Http\Controllers\ServiceController::class, 'destroy'])->name('destroy');
 
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::resource('/users', App\Http\Controllers\UserController::class);
+Route::get('/users',[\App\Http\Controllers\UserController::class, 'index'])->name('index');
+    Route::get('/create',[\App\Http\Controllers\UserController::class, 'create'])->name('create');
+    Route::post('/',[\App\Http\Controllers\UserController::class, 'store'])->name('store');
+    Route::get('/{service}/edit',[\App\Http\Controllers\UserController::class, 'edit'])->name('edit');
+    Route::post('/bulk-destroy',[\App\Http\Controllers\UserController::class, 'Destroy'])->name('bulk-destroy');
+    Route::post('/{service}',[\App\Http\Controllers\UserController::class, 'update'])->name('update');
+    Route::delete('/{service}',[\App\Http\Controllers\UserController::class, 'destroy'])->name('destroy');

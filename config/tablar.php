@@ -111,7 +111,7 @@ return [
     |
     */
 
-    'use_route_url' => true,
+    'use_route_url' => false,
     'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
@@ -151,46 +151,56 @@ return [
         ],
 
         [
-            'text' => 'Support 1',
+            'text' => 'Personal',
             'url' => '#',
             'icon' => 'ti ti-help',
-            'active' => ['support1'],
+            'active' => ['personal'],
             'submenu' => [
                 [
-                    'text' => 'Ticket',
-                    'url' => 'support1',
-                    'icon' => 'ti ti-article',
+                    'text' => 'Usuarios',
+                    'url' => '/users',
+                    'icon' => 'ti ti-user',
+                ],
+                [
+                    'text' => 'Empleados',
+                    'url' => '/employees',
+                    'icon' => 'ti ti-id-badge',
+                ],
+                [
+                    'text' => 'Servicios',
+                    'url' => '/services',
+                    'icon' => 'ti ti-view-list-alt',
                 ]
             ],
         ],
 
-        [
-            'text' => 'Support 2',
-            'url' => '#',
-            'icon' => 'ti ti-help',
-            'active' => ['support2'],
-            'submenu' => [
-                [
-                    'text' => 'Ticket',
-                    'url' => 'support2',
-                    'icon' => 'ti ti-article',
-                ]
-            ],
-        ],
+        // [
+        //     'text' => 'Support 2',
+        //     'url' => '#',
+        //     'icon' => 'ti ti-help',
+        //     'active' => ['support2'],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Ticket',
+        //             'url' => 'support2',
+        //             'icon' => 'ti ti-article',
+        //         ]
+        //     ],
+        // ],
 
-        [
-            'text' => 'Support 3',
-            'url' => '#',
-            'icon' => 'ti ti-help',
-            'active' => ['support3'],
-            'submenu' => [
-                [
-                    'text' => 'Ticket',
-                    'url' => 'support3',
-                    'icon' => 'ti ti-article',
-                ]
-            ],
-        ],
+        // [
+        //     'text' => 'Support 3',
+        //     'url' => '#',
+        //     'icon' => 'ti ti-help',
+        //     'active' => ['support3'],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Ticket',
+        //             'url' => 'support3',
+        //             'icon' => 'ti ti-article',
+        //         ]
+        //     ],
+        // ],
 
     ],
 

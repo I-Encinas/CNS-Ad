@@ -51,7 +51,7 @@
         </div>
     </div>
     <!-- Page body -->
-    <div class="page-body">
+    {{-- <div class="page-body">
         <div class="container-xl">
             <div class="row row-deck row-cards">
                 <div class="col-12">
@@ -418,12 +418,12 @@
                             {{--
                              Built In Paginator Component
                              {!! $modelName->links('tablar::pagination') !!}
-                             --}}
+                             
 
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

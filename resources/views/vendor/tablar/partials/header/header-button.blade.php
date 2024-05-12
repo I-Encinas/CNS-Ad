@@ -1,3 +1,4 @@
+
 <a href="https://github.com/takielias/tablar" class="btn" target="_blank" rel="noreferrer">
     <!-- Download SVG icon from http://tabler-icons.io/i/brand-github -->
     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"

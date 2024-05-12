@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45f478c0ad89f7cb16cbc7eb7d4cac3c",
+    "content-hash": "b63a9063e11d825837d198a71019e785",
     "packages": [
         {
             "name": "brick/math",
@@ -6007,6 +6007,84 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "konekt/html",
+            "version": "6.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artkonekt/html.git",
+                "reference": "599dfd0986a7a125170ed8897904cd65452a4e54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artkonekt/html/zipball/599dfd0986a7a125170ed8897904cd65452a4e54",
+                "reference": "599dfd0986a7a125170ed8897904cd65452a4e54",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^10.0|^11.0",
+                "illuminate/routing": "^10.0|^11.0",
+                "illuminate/session": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "illuminate/view": "^10.0|^11.0",
+                "php": "^8.1"
+            },
+            "replace": {
+                "laravelcollective/html": "^6.4"
+            },
+            "require-dev": {
+                "illuminate/database": "^10.0|^11.0",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.5.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Attila Fulop"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/artkonekt/html/issues",
+                "source": "https://github.com/artkonekt/html"
+            },
+            "time": "2024-03-12T18:48:30+00:00"
+        },
+        {
             "name": "laravel/pint",
             "version": "v1.15.3",
             "source": {
@@ -8207,6 +8285,62 @@
                 }
             ],
             "time": "2024-04-28T10:28:08+00:00"
+        },
+        {
+            "name": "takielias/tablar-crud-generator",
+            "version": "2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/takielias/tablar-crud-generator.git",
+                "reference": "02d9cd3be24d5e527f77207d0d31e8ad4932f1ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/takielias/tablar-crud-generator/zipball/02d9cd3be24d5e527f77207d0d31e8ad4932f1ee",
+                "reference": "02d9cd3be24d5e527f77207d0d31e8ad4932f1ee",
+                "shasum": ""
+            },
+            "require": {
+                "konekt/html": "^6.5",
+                "laravel/framework": "^9.0|^10.0|^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tablar\\CrudGenerator\\CrudServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tablar\\CrudGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taki Elias",
+                    "email": "taki.elias@gmail.com"
+                }
+            ],
+            "description": "Laravel Tablar Crud Generator based on https://github.com/takielias/tablar",
+            "keywords": [
+                "Tablar",
+                "crud",
+                "crud generator",
+                "laravel",
+                "laravel crud generator",
+                "laravel package"
+            ],
+            "support": {
+                "issues": "https://github.com/takielias/tablar-crud-generator/issues",
+                "source": "https://github.com/takielias/tablar-crud-generator/tree/2.3"
+            },
+            "time": "2024-05-02T06:19:47+00:00"
         },
         {
             "name": "theseer/tokenizer",
