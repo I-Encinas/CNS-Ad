@@ -10,7 +10,7 @@
                 <div class="col">
                     <!-- Page pre-title -->
                     <div class="page-pretitle">
-                        Create
+                        Crear
                     </div>
                     <h2 class="page-title">
                         {{ __('Pedidos Internos ') }}
@@ -45,7 +45,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Order Details</h3>
+                            <h3 class="card-title">Detalle</h3>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('orderis.store') }}" id="ajaxForm" role="form"

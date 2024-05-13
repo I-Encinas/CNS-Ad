@@ -28,7 +28,7 @@
                         Copyright &copy; 2022
                         <a href="https://ebuz.xyz"
                            class="link-secondary">{{config('tablar.bottom_title', 'TabLar')}}</a>.
-                        All rights reserved.
+                        Derechos reservados.
                     </li>
                     <li class="list-inline-item">
                         <a href="https://ebuz.xyz" class="link-secondary" rel="noopener">

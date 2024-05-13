@@ -48,7 +48,7 @@ class ServiceController extends Controller
         $service = Service::create($request->all());
 
         return redirect()->route('services.index')
-            ->with('success', 'Service created successfully.');
+            ->with('success', 'Creado exitosamente');
     }
 
     /**
@@ -91,7 +91,7 @@ class ServiceController extends Controller
         $service->update($request->all());
 
         return redirect()->route('services.index')
-            ->with('success', 'Service updated successfully');
+            ->with('success', 'Editado exitosamente');
     }
 
     /**
@@ -104,6 +104,6 @@ class ServiceController extends Controller
         $service = Service::find($id)->delete();
 
         return redirect()->route('services.index')
-            ->with('success', 'Service deleted successfully');
+            ->with('success', 'Eliminado exitosamente');
     }
 }

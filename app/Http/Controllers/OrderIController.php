@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\OrderI;
+use App\Models\OrderType;
 use Illuminate\Http\Request;
 
 /**
@@ -33,7 +34,9 @@ class OrderIController extends Controller
     public function create()
     {
         $order = new Order();
-        return view('orderi.create', compact('order'));
+        $ordert = OrderType::all();
+
+        return view('orderi.create', compact('order', 'ordert'));
     }
 
     /**
@@ -49,7 +52,7 @@ class OrderIController extends Controller
         $order = Order::create($request->all());
 
         return redirect()->route('orderis.index')
-            ->with('success', 'Order created successfully.');
+            ->with('success', 'Creado exitosamente');
     }
 
     /**
@@ -92,7 +95,7 @@ class OrderIController extends Controller
         $order->update($request->all());
 
         return redirect()->route('orderis.index')
-            ->with('success', 'Order updated successfully');
+            ->with('success', 'Editado exitosamente');
     }
 
     /**
@@ -105,6 +108,6 @@ class OrderIController extends Controller
         $order = Order::find($id)->delete();
 
         return redirect()->route('orderis.index')
-            ->with('success', 'Order deleted successfully');
+            ->with('success', 'Eliminado exitosamente');
     }
 }

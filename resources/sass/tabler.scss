@@ -28,4 +28,32 @@
 @import "../../node_modules/@tabler/icons-webfont/tabler-icons.css";
 
 // Custom Icon Sizes and Styles
-@import "../css/icon-style.css";
+// @import "../css/icon-style.css";
+/*Increase the default Icon size*/
+i.ti {
+    font-size: 20px;
+    color: rgb(5, 85, 30);
+}
+.navbar.navbar-vertical.navbar-expand-lg{
+    background-color: rgb(142, 168, 147);
+
+}
+.btn.btn-primary.d-none.d-sm-inline-block,
+.btn.btn-primary.ms-auto.ajax-submit {
+        background-color: rgb(24, 90, 53);
+}
+
+navbar-brand navbar-brand-autodark{
+    width: 60%;
+
+}
+.navbar-brand-image{
+    width: 35%;
+    height: auto;
+    padding-left: 7% ;
+    // padding: 10%;
+}
+.nav-link-title{
+    font-weight: bold;
+}
+

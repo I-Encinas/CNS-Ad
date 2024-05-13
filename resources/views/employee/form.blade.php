@@ -1,11 +1,10 @@
 
 <div class="form-group mb-3">
-    <label class="form-label">   {{ Form::label('service_id') }}</label>
+    <label class="form-label">{{ Form::label('service_id', 'Service') }}</label>
     <div>
-        {{ Form::text('service_id', $employee->service_id, ['class' => 'form-control' .
-        ($errors->has('service_id') ? ' is-invalid' : ''), 'placeholder' => 'Service Id']) }}
+        {{ Form::select('service_id', $services->pluck('name', 'id'), $employee->service_id, ['class' => 'form-control' . ($errors->has('service_id') ? ' is-invalid' : ''), 'placeholder' => 'Servicios']) }}
         {!! $errors->first('service_id', '<div class="invalid-feedback">:message</div>') !!}
-        <small class="form-hint">employee <b>service_id</b> instruction.</small>
+        <small class="form-hint">Seleciona un servicio.</small>
     </div>
 </div>
 <div class="form-group mb-3">
@@ -66,7 +65,7 @@
     <div class="form-footer">
         <div class="text-end">
             <div class="d-flex">
-                <a href="#" class="btn btn-danger">Cancelar</a>
+                <a href="/employees" class="btn btn-danger">Cancelar</a>
                 <button type="submit" class="btn btn-primary ms-auto ajax-submit">Enviar</button>
             </div>
         </div>

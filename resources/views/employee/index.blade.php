@@ -1,7 +1,7 @@
 @extends('tablar::page')
 
 @section('title')
-    Employee
+    Empleado
 @endsection
 
 @section('content')
@@ -47,20 +47,20 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Employee</h3>
+                            <h3 class="card-title">Empleado</h3>
                         </div>
                         <div class="card-body border-bottom py-3">
                             <div class="d-flex">
                                 <div class="text-muted">
-                                    Show
+                                    Mostrar
                                     <div class="mx-2 d-inline-block">
                                         <input type="text" class="form-control form-control-sm" value="10" size="3"
                                                aria-label="Invoices count">
                                     </div>
-                                    entries
+                                    entradas
                                 </div>
                                 <div class="ms-auto text-muted">
-                                    Search:
+                                    Buscar:
                                     <div class="ms-2 d-inline-block">
                                         <input type="text" class="form-control form-control-sm"
                                                aria-label="Search invoice">
@@ -85,13 +85,13 @@
                                         </svg>
                                     </th>
                                     
-										<th>Service Id</th>
-										<th>Ci</th>
-										<th>Name</th>
-										<th>Paternal Surname</th>
-										<th>Maternal Surname</th>
-										<th>Address</th>
-										<th>Phone</th>
+										<th>Servicio</th>
+										<th>CI</th>
+										<th>Nombre</th>
+										<th>Apellidos</th>
+										{{-- <th>Maternal Surname</th> --}}
+										<th>Dirección</th>
+										<th>Teléfono</th>
 
                                     <th class="w-1"></th>
                                 </tr>
@@ -104,11 +104,11 @@
                                                    aria-label="Select employee"></td>
                                         <td>{{ ++$i }}</td>
                                         
-											<td>{{ $employee->service_id }}</td>
+											<td>{{ $employee->service->name }}</td>
 											<td>{{ $employee->ci }}</td>
 											<td>{{ $employee->name }}</td>
-											<td>{{ $employee->paternal_surname }}</td>
-											<td>{{ $employee->maternal_surname }}</td>
+											<td>{{ $employee->paternal_surname }} {{ $employee->maternal_surname }}</td>
+											{{-- <td>{{ $employee->maternal_surname }}</td> --}}
 											<td>{{ $employee->address }}</td>
 											<td>{{ $employee->phone }}</td>
 
@@ -117,16 +117,16 @@
                                                 <div class="dropdown">
                                                     <button class="btn dropdown-toggle align-text-top"
                                                             data-bs-toggle="dropdown">
-                                                        Actions
+                                                        Acciones
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-end">
                                                         <a class="dropdown-item"
                                                            href="{{ route('employees.show',$employee->id) }}">
-                                                            View
+                                                            Ver
                                                         </a>
                                                         <a class="dropdown-item"
                                                            href="{{ route('employees.edit',$employee->id) }}">
-                                                            Edit
+                                                            Editar
                                                         </a>
                                                         <form
                                                             action="{{ route('employees.destroy',$employee->id) }}"
@@ -137,7 +137,7 @@
                                                                     onclick="if(!confirm('Do you Want to Proceed?')){return false;}"
                                                                     class="dropdown-item text-red"><i
                                                                     class="fa fa-fw fa-trash"></i>
-                                                                Delete
+                                                                Eliminar
                                                             </button>
                                                         </form>
                                                     </div>
@@ -146,7 +146,7 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <td>No Data Found</td>
+                                    <td>No hay datos</td>
                                 @endforelse
                                 </tbody>
 

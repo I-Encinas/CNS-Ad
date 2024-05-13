@@ -10,7 +10,7 @@
                 <div class="col">
                     <!-- Page pre-title -->
                     <div class="page-pretitle">
-                        View
+                        Vista
                     </div>
                     <h2 class="page-title">
                         {{ __('Employee ') }}
@@ -28,7 +28,7 @@
                                 <line x1="12" y1="5" x2="12" y2="19"/>
                                 <line x1="5" y1="12" x2="19" y2="12"/>
                             </svg>
-                            Employee List
+                            Volver
                         </a>
                     </div>
                 </div>
@@ -45,39 +45,37 @@
                     @endif
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Employee Details</h3>
+                            <h3 class="card-title">Detalles</h3>
                         </div>
-                        <div class="card-body">
-                            
-<div class="form-group">
-<strong>Service Id:</strong>
-{{ $employee->service_id }}
-</div>
-<div class="form-group">
-<strong>Ci:</strong>
-{{ $employee->ci }}
-</div>
-<div class="form-group">
-<strong>Name:</strong>
-{{ $employee->name }}
-</div>
-<div class="form-group">
-<strong>Paternal Surname:</strong>
-{{ $employee->paternal_surname }}
-</div>
-<div class="form-group">
-<strong>Maternal Surname:</strong>
-{{ $employee->maternal_surname }}
-</div>
-<div class="form-group">
-<strong>Address:</strong>
-{{ $employee->address }}
-</div>
-<div class="form-group">
-<strong>Phone:</strong>
-{{ $employee->phone }}
-</div>
-
+                        <div class="card-body">                            
+                            <div class="form-group">
+                            <strong>Servicio:</strong>
+                            {{ $employee->service_id }}
+                            </div>
+                            <div class="form-group">
+                            <strong>CI:</strong>
+                            {{ $employee->ci }}
+                            </div>
+                            <div class="form-group">
+                            <strong>Nombre:</strong>
+                            {{ $employee->name }}
+                            </div>
+                            <div class="form-group">
+                            <strong>Apellido Paterno:</strong>
+                            {{ $employee->paternal_surname }}
+                            </div>
+                            <div class="form-group">
+                            <strong>Apellido Materno:</strong>
+                            {{ $employee->maternal_surname }}
+                            </div>
+                            <div class="form-group">
+                            <strong>Dirección:</strong>
+                            {{ $employee->address }}
+                            </div>
+                            <div class="form-group">
+                            <strong>Telefono:</strong>
+                            {{ $employee->phone }}
+                            </div>
                         </div>
                     </div>
                 </div>

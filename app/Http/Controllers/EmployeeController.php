@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class EmployeeController extends Controller
     public function create()
     {
         $employee = new Employee();
-        return view('employee.create', compact('employee'));
+        $services = Service::all();
+        return view('employee.create', compact('employee', 'services'));
     }
 
     /**
@@ -48,7 +50,7 @@ class EmployeeController extends Controller
         $employee = Employee::create($request->all());
 
         return redirect()->route('employees.index')
-            ->with('success', 'Employee created successfully.');
+            ->with('success', 'Creado exitosamente');
     }
 
     /**
@@ -91,7 +93,7 @@ class EmployeeController extends Controller
         $employee->update($request->all());
 
         return redirect()->route('employees.index')
-            ->with('success', 'Employee updated successfully');
+            ->with('success', 'Editado exitosamente');
     }
 
     /**
@@ -104,6 +106,6 @@ class EmployeeController extends Controller
         $employee = Employee::find($id)->delete();
 
         return redirect()->route('employees.index')
-            ->with('success', 'Employee deleted successfully');
+            ->with('success', 'Eliminado exitosamente');
     }
 }

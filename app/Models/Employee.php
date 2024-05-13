@@ -26,6 +26,7 @@ class Employee extends Model
 {
     
     static $rules = [
+		'service_id' => 'required',
 		'ci' => 'required',
 		'name' => 'required',
 		'paternal_surname' => 'required',

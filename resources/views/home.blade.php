@@ -8,14 +8,14 @@
                 <div class="col">
                     <!-- Page pre-title -->
                     <div class="page-pretitle">
-                        Overview
+                        General
                     </div>
                     <h2 class="page-title">
-                        Dashboard
+                        Panel de Administracion
                     </h2>
                 </div>
                 <!-- Page title actions -->
-                <div class="col-12 col-md-auto ms-auto d-print-none">
+                {{-- <div class="col-12 col-md-auto ms-auto d-print-none">
                     <div class="btn-list">
                   <span class="d-none d-sm-inline">
                     <a href="#" class="btn btn-white">
@@ -46,7 +46,7 @@
                             </svg>
                         </a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
